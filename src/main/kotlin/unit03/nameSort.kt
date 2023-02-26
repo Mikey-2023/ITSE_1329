@@ -18,6 +18,7 @@ fun main() {
             else -> print("$name1\n$name3\n$name2")
         }
     }
+
     if (name2L<name1L){
         when{
             (name3L<name2L) -> print("$name3\n$name2\n$name1")
@@ -25,6 +26,7 @@ fun main() {
             else -> print("$name2\n$name3\n$name1")
         }
     }
+
     if(name1L==name2L){
         when{
             (name3L<name1L) -> print("$name3\n$name1\n$name2")
