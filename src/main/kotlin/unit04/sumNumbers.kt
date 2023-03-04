@@ -11,15 +11,16 @@ fun main(){
                 println("Please enter a positive integer.")
                 userNum = null
             }
-
         } catch (e: Exception){
             println("Please enter a positive integer.")
-
         }
     }
+
     var sum = 0
+
     for (num in 1..userNum){
         sum += num
     }
+
     print("The total is $sum")
 }
