@@ -17,10 +17,9 @@ fun main(){
     }
 
     var sum = 0
-
     for (num in 1..userNum){
         sum += num
     }
 
-    print("The total is $sum")
+    print("The sum of all integers up to the one you entered is $sum")
 }
