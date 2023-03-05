@@ -12,5 +12,5 @@ fun main(){
         }
     }
 
-    print("Sum: $sum")
+    print("The character you chose appeared $sum times in the string you entered.")
 }
