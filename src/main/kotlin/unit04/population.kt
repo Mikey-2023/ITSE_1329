@@ -2,7 +2,6 @@ package unit04
 
 fun main(){
     var initialOrganisms: Int? = null
-
     while (initialOrganisms == null){
         print("Enter the initial organism population: ")
         val readLn = readln()
@@ -18,7 +17,6 @@ fun main(){
     }
 
     var avgIncrease: Double? = null
-
     while (avgIncrease == null){
         print("Enter the average daily population increase: ")
         val readLn2 = readln()
@@ -28,7 +26,6 @@ fun main(){
                 println("This should be a non-negative value.")
                 avgIncrease = null
             }
-
         } catch(e: Exception){
             println("Please enter a non-negative number.")
         }
@@ -44,14 +41,12 @@ fun main(){
                 println("This should be an integer of 1 or greater.")
                 daysIncrease = null
             }
-
         } catch(e: Exception){
             println("Please enter a non-negative number.")
         }
     }
 
     var totalOrganisms: Double = initialOrganisms.toDouble()
-
     for (d in 1..daysIncrease){
         if (d == 1){
             println("On day 1, there are " + totalOrganisms.toInt() + " organisms." )
@@ -61,7 +56,4 @@ fun main(){
             println("On day $d there are " + totalOrganisms.toInt() + " organisms.")
         }
     }
-
-
-
 }
