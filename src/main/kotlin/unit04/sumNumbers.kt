@@ -4,10 +4,10 @@ fun main(){
 
     while (userNum == null){
         print("Enter a positive integer: ")
-        val inputVar = readln()
+        val readLineVar = readln()
         try{
-            userNum = inputVar.toInt()
-            if (userNum != null && userNum <= 0){
+            userNum = readLineVar.toInt()
+            if (userNum <= 0){
                 println("Please enter a positive integer.")
                 userNum = null
             }
