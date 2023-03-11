@@ -21,5 +21,5 @@ fun main(){
         sum += num
     }
 
-    print("The sum of all integers up to the one you entered is $sum")
+    print("The sum of all positive integers up to the one you entered is $sum")
 }
