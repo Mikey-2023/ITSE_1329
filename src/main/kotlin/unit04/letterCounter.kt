@@ -1,3 +1,5 @@
+package unit04
+
 fun main(){
     print("Enter a string: ")
     val userInput = readln()
