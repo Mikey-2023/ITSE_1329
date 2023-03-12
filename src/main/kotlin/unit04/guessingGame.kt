@@ -1,5 +1,6 @@
 package unit04
 import java.util.Random
+
 fun main(){
     val random = Random()
     val randomNum = random.nextInt(11)
