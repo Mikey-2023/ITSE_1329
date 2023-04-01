@@ -1,5 +1,5 @@
 package unit05
-// Hi, mom!!
+
 // The function calculateRetail returns the monetary value of an item by receiving its wholesale and markup values
 fun calculateRetail(wholesale: Double, markup: Double): Double {
 
