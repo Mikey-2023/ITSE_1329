@@ -6,6 +6,7 @@ fun profit(NS: Double, PP: Double, PC: Double, SP: Double, SC: Double): Double {
 
 }
 
+
 fun main() {
 
     val profitVar = profit(5.3, 7000.50, 1000.50, 10000.80, 700.00)
