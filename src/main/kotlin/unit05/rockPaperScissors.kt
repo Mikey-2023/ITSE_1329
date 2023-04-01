@@ -8,12 +8,14 @@ fun printGameRules() {
 
 }
 
+
 fun wantsToPlay(): Boolean {
 
     print("Do you want to play? Type 'y' or 'n': ")
     return readln() == "y"
 
 }
+
 
 fun validateAnswer(): Int {
 
@@ -39,6 +41,7 @@ fun validateAnswer(): Int {
     return playerChoice
 
 }
+
 fun getAnswers(): Pair<Int, Int> {
 
     print("Choose Rock, Paper or Scissors: ")
@@ -53,7 +56,6 @@ fun getAnswers(): Pair<Int, Int> {
 }
 
 //                  --------------------------------------------------------------
-
 
 fun main(){
 
