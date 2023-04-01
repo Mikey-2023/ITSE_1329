@@ -12,9 +12,7 @@ fun fallingDistance(seconds: Double): Double {
 fun main(){
 
     for (s in 1..10) {
-
         println(fallingDistance(s.toDouble()))
-
     }
 
 }
