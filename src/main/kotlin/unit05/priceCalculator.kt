@@ -9,15 +9,15 @@ fun calculateRetail(wholesale: Double, markup: Double): Double {
 
 fun main(){
 
-    var wholesale_var: Double? = null
-    while (wholesale_var == null) {
+    var wholesaleVar: Double? = null
+    while (wholesaleVar == null) {
 
         print("Enter the item's wholesale cost: ")
         try {
-            wholesale_var = readln().toDouble()
-            if (wholesale_var < 0) {
+            wholesaleVar = readln().toDouble()
+            if (wholesaleVar < 0) {
                 println("Invalid input. Please enter a nonnegative number.")
-                wholesale_var = null
+                wholesaleVar = null
             }
         }
         catch (e: Exception) {
@@ -27,15 +27,15 @@ fun main(){
     }
 
 
-    var markup_var: Double? = null
-    while (markup_var == null) {
+    var markupVar: Double? = null
+    while (markupVar == null) {
 
         print("Enter the item's markup as a percentage: ")
         try {
-            markup_var = readln().toDouble()
-            if (markup_var < 0) {
+            markupVar = readln().toDouble()
+            if (markupVar < 0) {
                 println("Invalid input. Please enter a nonnegative number.")
-                markup_var = null
+                markupVar = null
             }
         }
         catch (e: Exception) {
@@ -44,6 +44,6 @@ fun main(){
 
     }
 
-    println("The item's retail price is $"+"%.2f".format(calculateRetail(wholesale_var, markup_var)))
+    println("The item's retail price is $"+"%.2f".format(calculateRetail(wholesaleVar, markupVar)))
 
 }
