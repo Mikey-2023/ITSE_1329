@@ -42,6 +42,7 @@ fun validateAnswer(): Int {
 
 }
 
+
 fun getAnswers(): Pair<Int, Int> {
 
     print("Choose Rock, Paper or Scissors: ")
