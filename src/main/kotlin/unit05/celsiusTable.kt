@@ -9,9 +9,7 @@ fun celsius(F: Double): Double {
 fun main(){
 
     for (t in 0..20) {
-
         println("Fahrenheit: $t, Celsius: ${celsius(t.toDouble())}")
-
     }
 
 }
