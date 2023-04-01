@@ -7,6 +7,7 @@ fun calculateRetail(wholesale: Double, markup: Double): Double {
 
 }
 
+
 fun main(){
 
     var wholesaleVar: Double? = null
