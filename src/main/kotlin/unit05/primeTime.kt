@@ -8,6 +8,7 @@ fun isNumberDivisible(number: Int, divisor: Int): Boolean {
 
 }
 
+
 fun isPrime(number: Int): Boolean {
 
     if (number <= 1) {
@@ -23,6 +24,7 @@ fun isPrime(number: Int): Boolean {
     return true
 
 }
+
 
 fun main(){
 
