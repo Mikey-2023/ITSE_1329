@@ -1,64 +1,73 @@
 package unit05
 
 fun printGameRules() {
+
     println("Rock is 1")
     println("Paper is 2")
     println("Scissors is 3")
-}
 
+}
 
 fun wantsToPlay(): Boolean {
+
     print("Do you want to play? Type 'y' or 'n': ")
     return readln() == "y"
+
 }
 
+fun validateAnswer(): Int {
 
-fun playerAnswer(): Int {
-    print("Choose rock, paper or scissors: ")
-    return readln().toInt()
-}
+    var playerChoice: Int? = null
+    while (playerChoice == null) {
 
-fun cpuAnswer(): Int {
-    return (1..3).random()
-}
+        print("Enter your choice: ")
+        try {
 
-// function selectWinner should take unit05.playerAnswer as first argument and unit05.cpuAnswer as second argument
-// it then returns who won as a string, 'player' or 'computer', or 'tie'
-fun selectWinner(x: Int, y: Int): String {
+            playerChoice = readln().toInt()
+            if (playerChoice !in (1..3)) {
+                print("ERROR: Please enter a number between 1 to 3")
+                playerChoice = null
 
-    if ((x == 1 && y == 3) || (x == 2 && y == 1) || (x == 3 && y == 2)) {
-        return "player"
+            }
+        } catch (e: Exception) {
+
+            print("ERROR: Please enter a number between 1 to 3")
+
+        }
+
     }
-    if ((x == 1 && y == 1) || (x == 2 && y == 2) || (x == 3 && y == 3)) {
-        return "tie"
-    }
-    if ((x == 1 && y == 2) || (x == 2 && y == 3) || (x == 3 && y == 1)) {
-        return "computer"
-    }
-    return "ERROR"
+    return playerChoice
+
+}
+fun getAnswers(): Pair<Int, Int> {
+
+    print("Choose Rock, Paper or Scissors: ")
+    val playerChoice = validateAnswer()
+
+    val computerChoice = (1..3).random()
+    val numsForRPS = mapOf(1 to "Rock", 2 to "Paper", 3 to "Scissors")
+    println("The computer chose ${numsForRPS[computerChoice]}")
+
+    return Pair(playerChoice, computerChoice)  // First is player's answers , second is computer's
+
 }
 
-fun printResults(winner: String) {
-
-    if (winner == "player") {
-        println("Player wins")
-    } else if (winner == "computer") {
-        println("Computer wins")
-    } else if (winner == "tie") {
-        println("Tie")
-    }
-}
+//                  --------------------------------------------------------------
 
 
 fun main(){
+
     printGameRules()
+    val mapResults = mapOf(
+                            Pair(1,1) to "Tie!", Pair(2,2) to "Tie!", Pair(3,3) to "Tie!",
+                            Pair(1,3) to "You win", Pair(2,1) to "You win", Pair(3, 2) to "You win",
+                            Pair(1,2) to "You lose", Pair(2,3) to "You lose", Pair(3,1) to "You lose"
+                          )
 
     while (wantsToPlay()) {
-        val cpuAnswer = cpuAnswer()
-        val playerAnswer = playerAnswer()
-        println("The computer chose $cpuAnswer")
-        val winner = selectWinner(playerAnswer, cpuAnswer)
-        printResults(winner)
+
+        println(mapResults[getAnswers()])
+
     }
 
 }
