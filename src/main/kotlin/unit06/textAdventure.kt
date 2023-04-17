@@ -12,17 +12,20 @@ fun main(){
 
     println("Enter 'n' for north, 'e' for east, 's' for south, or 'w' for west")
     println("When you're done playing, type 'n'")
+
     var current_room_index = 0  // starting room
     println(room_list[0][0])  // starting description
-    var done = false
 
+    var done = false
     while (!done) {
+
         val copy_current_room_index = current_room_index
+
         var valid_response = false
         while (!valid_response){
+
             print("Which way should I move?: ")
             val direction = readln()
-
             when (direction) {
                 "n" -> current_room_index = room_list[current_room_index][1] as Int
                 "e" -> current_room_index = room_list[current_room_index][2] as Int
@@ -36,16 +39,15 @@ fun main(){
             } else {
                 valid_response = true
             }
+
         }
+
         println(room_list[current_room_index][0])
+
         print("Keep playing?: ")
         if (readln() == "n") {
             done = true
             print("Thanks for playing!")
         }
-
-
-
     }
-
 }
