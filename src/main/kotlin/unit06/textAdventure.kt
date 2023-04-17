@@ -1,5 +1,7 @@
 package unit06
 
+//todo: input validation for direction choice and y/n done decision
+
 fun main(){
     //room_list[roomindex][0] is room desc; room_list[roomindex][1] gives new room index if move north, 2 east, 3, south, 4 west
     val room_list = arrayOf(
